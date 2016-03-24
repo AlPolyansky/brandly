@@ -1,0 +1,50 @@
+section
+	min-height: 1150px
+	text-align: center
+	h2
+		margin: 60px 0
+		display: inline-block
+		position: relative
+		&:after,&:before
+			content: ''
+			display: block
+			width: 50%
+			height: 2px
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -15px
+			margin: auto
+		&:before
+			top: -15px
+			bottom: auto
+	.category
+		width: 370px
+		margin: 10px
+		height: 418px
+		color: $baseColor
+		padding: 0
+		position: relative
+		.category_wrap
+			@extend .posCenter
+			background-color: rgba($exColor,.7)
+			z-index: 100
+			
+			.h3_wrap
+				@extend .posCenter
+				border: 3px solid #fff
+				height: 85%
+				width: 80%
+				margin: auto
+				h3
+					@extend .posCenter
+					display: table-cell
+					margin: 0
+					z-index: 200
+					line-height: 334.4px
+					font-family: $fontExLightItalic
+					font-size: 30px
+					font-weight: 100
+					a
+						display: block
+						@extend .totalS
