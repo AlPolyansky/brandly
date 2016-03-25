@@ -1,91 +1,106 @@
 header
-	background-size: cover
-	background-repeat: no-repeat
-	position: relative;
+	font-size: 100%
+	position: relative
+	height: 100%
 	width: 100%
-	.header_cloth
-		@extend .posCenter
-		z-index: 10
-	img
-		position: absolute
-
+	background-size: cover
+	background-position: center
+	background-image: url("../img/girl.jpg")
 	.header_wrap
 		overflow: hidden
-		position: relative
-		z-index: 20
-		width: $contentWidth
-		height: 100%
-		margin: 0 auto
-		.logo
-			h1
-				text-transform: uppercase
-				font-size: 36px
-				font-weight: normal
-			span
-				font-size: 26px
-		.top_menu
-			ul
+		.header_content_wrap
+			@extend .posCenter
+			z-index: 10
+			.logo
+				float: left
+				h1
+					display: inline-block
+					text-transform: uppercase
+					font-size: 36px
+					font-weight: normal
+				span
+					font-size: 26px
+			.top_menu
+				float: right
 				li
 					display: inline-block
 					padding-left: 37px
 					padding-right: 37px
 					margin-top: 40px
-		.header_title_wrap
+			#toggle
+				cursor: pointer
+				position: absolute
+				right: 20px
+				top: 35px
+				width: 40px
+				height: 40px
+			#toggle div
+			  width: 100%
+			  height: 5px
+			  background: white
+			  margin: 4px auto
+			  transition: all 0.3s
+			  backface-visibility: hidden
+
+			#toggle.on .one
+			  transform: rotate(45deg) translate(5px, 5px)
+
+			#toggle.on .two
+			  opacity: 0
+
+			#toggle.on .three
+			  transform: rotate(-45deg) translate(7px, -8px)
 			.centered
 				position: absolute
-				top: -170px
-				right: 0
-				bottom: 0
 				left: 0
-				width: 100%
-				height: 0
-				margin: auto
-				
-				h2,h3
-					text-align: center
-					text-transform: uppercase
-					font-size: 50px
-					letter-spacing: 2px
-				.colection,.header_title
-					font-size: 25px
-					position: relative
-					top: -170px
-					letter-spacing: 9px
-					font-weight: 100
-				.header_title
-					top: -70px
-					letter-spacing: 1px
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				.title
+					max-height: 60%
+					overflow: hidden
+					h2,p
+						text-align: center
+						text-transform: uppercase
+						font-size: 45px
+						letter-spacing: 2px
+					.colection,.header_title
+						font-size: 24px
+						position: relative
+						letter-spacing: 9px
+						font-weight: 100
+					.header_title
+						letter-spacing: 1px
 				.button
 					position: relative
-					top: -70px
 					text-align: center
 					border-width: 1px
 					border-style: solid
 					display: block
-					padding: 10px 20px
-					font-size: 12px
+					padding: 20px 10px
 					margin: 0 auto
 					width: 200px
 					text-transform: uppercase
-				.target
-					margin: 0 auto
-					position: relative
-					top: 45px
-					ul
-						padding: 0
-						margin: 0
-						text-align: center
-						li
-							display: inline-block
-							vertical-align: middle
-							width: 12px
-							height: 12px
-							margin: 0 2px
-							border-radius: 50%
-							cursor: pointer
-						.active_target
-							background-color: inherit
-							width: 16px
-							height: 16px
-							border-width: 2px
-							border-style: solid
+		.target
+			margin: 0 auto
+			position: absolute
+			bottom: 20px
+			width: 100%
+			ul
+				padding: 0
+				margin: 0
+				text-align: center
+				li
+					display: inline-block
+					vertical-align: middle
+					width: 12px
+					height: 12px
+					margin: 0 2px
+					border-radius: 50%
+					cursor: pointer
+				.active_target
+					background-color: inherit
+					width: 16px
+					height: 16px
+					border-width: 2px
+					border-style: solid

@@ -18,33 +18,70 @@ section
 		&:before
 			top: -15px
 			bottom: auto
-	.category
-		width: 370px
-		margin: 10px
-		height: 418px
-		color: $baseColor
-		padding: 0
+	.latest_wrap
 		position: relative
-		.category_wrap
+		margin: 20px 0
+		img
+			width: 100%
+		.latest_content
 			@extend .posCenter
-			background-color: rgba($exColor,.7)
-			z-index: 100
-			
+			height: 100%
+			margin: auto
+			padding: 40px
 			.h3_wrap
-				@extend .posCenter
-				border: 3px solid #fff
-				height: 85%
-				width: 80%
-				margin: auto
+				height: 100%
+				width: 100%
+				border-width: 1px
+				border-style: solid
 				h3
-					@extend .posCenter
-					display: table-cell
 					margin: 0
-					z-index: 200
-					line-height: 334.4px
-					font-family: $fontExLightItalic
-					font-size: 30px
-					font-weight: 100
+					height: 100%
 					a
-						display: block
-						@extend .totalS
+						position: relative
+						display: table
+						height: 100%
+						width: 100%
+						font-size: 30px
+						i
+							font-style: normal
+							display: table-cell
+							vertical-align: middle
+		.action_wrap
+			padding: 0
+			.action
+				border: none
+				margin: 0 auto
+				h3
+					display: table
+					width: 100%
+					a
+						display: table-cell
+						vertical-align: middle
+						text-decoration: none
+						i
+							display: inline-block
+							width: 50%
+							text-align: center
+							margin: 0 auto
+							position: relative
+							padding: 40px 0
+							&:hover
+								&:after,&:before
+									content: ''
+									display: none
+							&:after,&:before
+								content: ''
+								display: block
+								width: 50%
+								height: 1px
+								position: absolute
+								left: 0
+								right: 0
+								margin: auto
+							&:after
+								top: 0
+							&:before
+								bottom: 0
+			
+							
+					

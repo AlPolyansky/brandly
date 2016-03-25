@@ -1,6 +1,5 @@
 header
-	background-image: url("../img/girl.jpg")
-	.header_cloth
+	.header_content_wrap
 		background-color: rgba($exColor,.4)
 	.logo
 		h1
@@ -14,25 +13,34 @@ header
 					font-family: $fontExRegular
 					a,a:hover,a:active,a:visited
 						color: $baseColor
-	.header_title_wrap
-			.centered
-				h2,h3
-					font-family: $fontMainBlack
-					color: $baseColor
-				.colection,.header_title
-					font-family: $fontExLight
-				.button
-					color: $baseColor
-					border-color: $baseColor
-					font-family: $fontMainBlack
-				.target
-					ul
-						li
-							background-color: $baseColor
-						.active_target
-							border-color: $baseColor
+	.centered
+		h2,p
+			font-family: $fontMainBlack
+			color: $baseColor
+		.colection,.header_title
+			font-family: $fontExLight
+		.button
+			color: $baseColor
+			border-color: $baseColor
+			font-family: $fontMainBlack
+	.target
+		ul
+			li
+				background-color: $baseColor
+			.active_target
+				border-color: $baseColor
 section
 	h2
 		font-family: $fontExLightItalic
 		&:after,&:before
 			background-color: darken($mainColor,2%)
+.latest_content
+	background-color: rgba($exColor,.7)
+.h3_wrap
+	border-color: $baseColor
+	a
+		color: $baseColor
+		i
+			color: $baseColor
+			&:after,&:before
+				background-color: $baseColor
