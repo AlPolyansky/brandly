@@ -1,40 +1,35 @@
 header
-	font-size: 100%
-	position: relative
-	height: 100%
-	width: 100%
-	background-size: cover
-	background-position: center
-	background-image: url("../img/girl.jpg")
 	.header_wrap
-		overflow: hidden
-		.header_content_wrap
-			@extend .posCenter
-			z-index: 10
-			.logo
-				float: left
-				h1
-					display: inline-block
-					text-transform: uppercase
-					font-size: 36px
-					font-weight: normal
-				span
-					font-size: 26px
-			.top_menu
-				float: right
-				li
-					display: inline-block
-					padding-left: 37px
-					padding-right: 37px
-					margin-top: 40px
-			#toggle
-				cursor: pointer
-				position: absolute
-				right: 20px
-				top: 35px
-				width: 40px
-				height: 40px
-			#toggle div
+		position: absolute
+		z-index: 1000
+		width: 100%
+		.logo
+			text-transform: uppercase
+			h1
+				font-weight: 100
+				font-size: 34px
+			span
+				font-size: 26px
+			a
+				color: inherit
+				text-decoration: none
+		.top_menu
+			float: right
+			li
+				display: inline-block
+				padding-left: 37px
+				padding-right: 37px
+				margin-top: 40px
+		#toggle
+			cursor: pointer
+			position: absolute
+			right: 20px
+			top: 35px
+			width: 40px
+			height: 40px
+			z-index: 10000
+			span
+			  display: block
 			  width: 100%
 			  height: 5px
 			  background: white
@@ -42,65 +37,70 @@ header
 			  transition: all 0.3s
 			  backface-visibility: hidden
 
-			#toggle.on .one
-			  transform: rotate(45deg) translate(5px, 5px)
+		#toggle.on .one
+			transform: rotate(45deg) translate(5px, 5px)
 
-			#toggle.on .two
-			  opacity: 0
+		#toggle.on .two
+			opacity: 0
 
-			#toggle.on .three
-			  transform: rotate(-45deg) translate(7px, -8px)
-			.centered
-				position: absolute
-				left: 0
-				right: 0
-				top: 50%
-				transform: translateY(-50%)
-				.title
-					max-height: 60%
-					overflow: hidden
-					h2,p
-						text-align: center
-						text-transform: uppercase
-						font-size: 45px
-						letter-spacing: 2px
-					.colection,.header_title
-						font-size: 24px
-						position: relative
-						letter-spacing: 9px
-						font-weight: 100
-					.header_title
-						letter-spacing: 1px
-				.button
-					position: relative
-					text-align: center
-					border-width: 1px
-					border-style: solid
-					display: block
-					padding: 20px 10px
-					margin: 0 auto
-					width: 200px
-					text-transform: uppercase
-		.target
-			margin: 0 auto
-			position: absolute
-			bottom: 20px
+		#toggle.on .three
+			transform: rotate(-45deg) translate(7px, -8px)
+
+	.slider
+		color: #fff;
+		text-align: center
+		position: relative
+		width: 100%
+		.item
+			background-size: cover
+			background-position: center
+			background-repeat: no-repeat
 			width: 100%
-			ul
-				padding: 0
-				margin: 0
-				text-align: center
-				li
-					display: inline-block
-					vertical-align: middle
-					width: 12px
-					height: 12px
-					margin: 0 2px
-					border-radius: 50%
-					cursor: pointer
-				.active_target
-					background-color: inherit
+			height: 100%
+			background-image: url('../img/girl.jpg')
+			.sl_shell
+				@extend .posCenter
+				.centered
+					right: 0
+					left: 0
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					.title
+						max-height: 60%
+						overflow: hidden
+						h2,p
+							text-align: center
+							text-transform: uppercase
+							font-size: 45px
+							letter-spacing: 2px
+						.colection,.header_title
+							font-size: 24px
+							position: relative
+							letter-spacing: 9px
+							font-weight: 100
+						.header_title
+							letter-spacing: 1px
+						.button
+							position: relative
+							text-align: center
+							border-width: 1px
+							border-style: solid
+							display: block
+							padding: 20px 10px
+							margin: 0 auto
+							width: 200px
+							text-transform: uppercase
+		.flickity-page-dots
+				bottom: 25px
+				.dot
 					width: 16px
 					height: 16px
-					border-width: 2px
-					border-style: solid
+					background-color: #fff
+					opacity: 1
+					vertical-align: middle
+				.is-selected
+					width: 20px
+					height: 20px
+					background-color: inherit
+					border: 2px solid #fff

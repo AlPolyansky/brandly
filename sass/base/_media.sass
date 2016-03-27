@@ -7,32 +7,78 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.top_menu
-		display: none
+	.header_wrap
+		.top_menu
+			display: none
+	#footer
+		.footer_wrap
+			form
+				text-align: center
+				.form_wrap
+					.place_wrap
+						width: 100%
+						i
+							top: 27px
+	.trends
+		button
+			margin: 0!important
+			display: block
+			padding: 0
+			height: 60px
+			width: 60px
+			background-color: #fff
+			border-radius: 50%
+			top: 120px
+			opacity: .8
+			&:hover
+				background-color: #fff
+		.previous
+			left: 20px
+			svg			
+				right: auto
+		.next
+			right: 20px
+			svg
+				right: 10px
+				left: auto
+				//right: -100px!important
+		.is-selected
+			button:hover
+				background-color: #fff
+				opacity: 1
+		.size_wrap
+			width: 100%
+		.flickity-page-dots
+			display: none
+
+					
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
 	header
-		.header_content_wrap
-		.target
-			bottom: 0
 		.header_wrap
-			.header_content_wrap
-				.logo
-					h1
-						font-size: 40px
-						color: #fff
-				.centered
-					.title
-						padding: 0 2%
-						h2
-							font-size: 20px
-						.colection,.header_title
-							font-size: 12px
-						.button
-							padding: 10px 5px
-							width: 150px
+			.logo
+				h1
+					font-size: 40px
+					color: #fff
+		.slider
+			.flickity-page-dots
+				.dot
+					width: 20px
+					height: 20px
+			.item
+				.sl_shell
+					.centered
+						.title
+							padding: 0 2%
+							h2
+								font-size: 20px
+							.colection,.header_title
+								font-size: 12px
+							.button
+								padding: 10px 5px
+								width: 150px
 	section
 		.latest_wrap
 			.action_wrap
